@@ -54,7 +54,36 @@ namespace FPS
         private List<FPSItem> _instantiatedWeapons;
 
         #region Input
-#if ENABLE_INPUT_SYSTEM
+        public void OnLook(Vector2 value)
+        {
+            _viewHandler.OnLook(value);
+        }
+
+        public void OnMove(Vector2 value)
+        {
+            _movementHandler.OnMove(value);
+        }
+
+        public void OnCrouch()
+        {
+            _movementHandler.OnCrouch();
+        }
+
+        public void OnJump()
+        {
+            _movementHandler.OnJump();
+        }
+
+        public void OnSlide()
+        {
+            _movementHandler.OnSlide();
+        }
+
+        public void OnSprint(InputValue value)
+        {
+            _movementHandler.OnSprint(value);
+        }
+
         public void OnReload()
         {
             if (_movementHandler.IsSprinting || HasActiveAction
@@ -136,9 +165,9 @@ namespace FPS
                 : _currentWeaponIndex + 1);
         }
 
-        public void OnLean(InputValue value)
+        public void OnLean(float value)
         {
-            _userInput.SetValue(FPSANames.LeanInput, value.Get<float>() * _controllerSettings.LeanAngle);
+            _userInput.SetValue(FPSANames.LeanInput, value * _controllerSettings.LeanAngle);
             PlayTransitionMotion(_controllerSettings.LeanMotion);
         }
 
@@ -188,7 +217,6 @@ namespace FPS
 
             GetActiveItem().OnAttachmentChanged((int)value.Get<float>());
         }
-#endif
         #endregion
 
         public void ResetAction()
@@ -363,12 +391,6 @@ namespace FPS
 
         private void Start()
         {
-            Cursor.visible = false; // to do: del this
-            Cursor.lockState = CursorLockMode.Locked; // to do: del this
-            Application.targetFrameRate = 144; // to do: del this
-
-            //_weaponBoneTransform = GetComponentInChildren<KRigComponent>().GetRigTransform(_controllerSettings.WeaponBone);
-
             _fpsAnimator.Initialize();
 
             InitializeWeapons();

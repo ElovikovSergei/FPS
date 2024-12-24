@@ -1,12 +1,15 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask/#master",
+    "com.miniit.dicontainer": "https://github.com/Mini-IT/Mini-container.git#main",
+    "com.miniit.framework.statemachine": "https://github.com/Mini-IT/unity-framework-statemachine.git#main",
+    "com.unity.addressables": "2.2.2",
     "com.unity.ai.navigation": "2.0.5",
     "com.unity.burst": "1.8.18",
     "com.unity.cinemachine": "2.10.3",
     "com.unity.collab-proxy": "2.6.0",
     "com.unity.collections": "2.5.1",
     "com.unity.ext.nunit": "2.0.5",
-    "com.unity.ide.rider": "3.0.31",
     "com.unity.ide.visualstudio": "2.0.22",
     "com.unity.inputsystem": "1.11.2",
     "com.unity.mathematics": "1.3.2",
@@ -21,7 +24,6 @@
     "com.unity.shadergraph": "17.0.3",
     "com.unity.test-framework": "1.4.5",
     "com.unity.test-framework.performance": "3.0.3",
-    "com.unity.timeline": "1.8.7",
     "com.unity.ugui": "2.0.0",
     "com.unity.visualscripting": "1.9.5",
     "com.unity.modules.accessibility": "1.0.0",
@@ -30,7 +32,6 @@
     "com.unity.modules.animation": "1.0.0",
     "com.unity.modules.assetbundle": "1.0.0",
     "com.unity.modules.audio": "1.0.0",
-    "com.unity.modules.cloth": "1.0.0",
     "com.unity.modules.director": "1.0.0",
     "com.unity.modules.hierarchycore": "1.0.0",
     "com.unity.modules.imageconversion": "1.0.0",
@@ -53,10 +54,8 @@
     "com.unity.modules.unitywebrequestaudio": "1.0.0",
     "com.unity.modules.unitywebrequesttexture": "1.0.0",
     "com.unity.modules.unitywebrequestwww": "1.0.0",
-    "com.unity.modules.vehicles": "1.0.0",
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
-    "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
   }
 }

@@ -1,7 +1,6 @@
 using KINEMATION.FPSAnimationFramework.Runtime.Recoil;
 using KINEMATION.FPSAnimationFramework.Runtime.Core;
 using KINEMATION.KAnimationCore.Runtime.Input;
-using UnityEngine.InputSystem;
 using UnityEngine;
 
 namespace FPS
@@ -17,12 +16,10 @@ namespace FPS
         private UserInputController _userInput;
         private RecoilPattern _recoilPattern;
 
-#if ENABLE_INPUT_SYSTEM
-        public void OnLook(InputValue value)
+        public void OnLook(Vector2 value)
         {
-            _viewInput = value.Get<Vector2>();
+            _viewInput = value;
         }
-#endif
 
         public void Initialize(UserInputController userInput, RecoilPattern recoilPattern)
         {
