@@ -34,11 +34,13 @@ namespace FPS.Bootstrap
 
         private async UniTaskVoid OnReadyAsync()
         {
-            
+            await UniTask.Delay(1);
         }
 
         protected override void Awake()
         {
+            Cursor.visible = false; // to do: del this
+            Cursor.lockState = CursorLockMode.Locked; // to do: del this
             Application.targetFrameRate = 60;
 
             base.Awake();

@@ -55,6 +55,7 @@ namespace FPS.Common
             }
 
             service.SetController(view);
+            service.Initialize();
         }
 
         private bool TryGetInstance<T>(out T component) where T : Component

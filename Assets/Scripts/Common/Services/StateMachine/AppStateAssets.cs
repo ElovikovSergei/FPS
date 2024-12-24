@@ -22,7 +22,7 @@ namespace FPS.Common
 
             for (int i = 0; i < assets.Length; ++i)
             {
-                instances[i] = await assets[i].InstantiateAsync(_spawnPoint);
+                instances[i] = await assets[i].InstantiateAsync(_spawnPoint.position, Quaternion.identity);
             }
 
             return instances;

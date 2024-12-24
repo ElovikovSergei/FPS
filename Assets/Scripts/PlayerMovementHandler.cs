@@ -132,17 +132,14 @@ namespace FPS
         private UserInputController _userInput;
         private Animator _animator;
 
-
-
-#if ENABLE_INPUT_SYSTEM
-        public void OnMove(InputValue value)
+        public void OnMove(Vector2 value)
         {
             if (!_consumeMoveInput)
             {
                 return;
             }
 
-            _moveInput = value.Get<Vector2>();
+            _moveInput = value;
         }
 
         public void OnCrouch()
@@ -233,7 +230,6 @@ namespace FPS
 
             CurrentMovementState = MovementState.Walking;
         }
-#endif
 
         public void Initialize(CharacterController controller, UserInputController userInput, Animator animator)
         {
