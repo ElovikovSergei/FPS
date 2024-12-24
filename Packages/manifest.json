@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.miniit.dicontainer": "https://github.com/Mini-IT/Mini-container.git#main",
     "com.unity.ai.navigation": "2.0.5",
     "com.unity.burst": "1.8.18",
     "com.unity.cinemachine": "2.10.3",

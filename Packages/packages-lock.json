@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.miniit.dicontainer": {
+      "version": "https://github.com/Mini-IT/Mini-container.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "3587b1ac55a447c5c027e4ec8e2b5707c347441a"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.5",
       "depth": 0,
