@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a80392fe2a36ff4a994318d92f21f96, type: 3}
+  m_Name: MovementStatesSettings
+  m_EditorClassIdentifier: 
+  <GroundMask>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 136
+  <Idle>k__BackingField:
+    <Velocity>k__BackingField: 0
+    <VelocitySmoothing>k__BackingField: 6.5
+  <Prone>k__BackingField:
+    <Velocity>k__BackingField: 0.6
+    <VelocitySmoothing>k__BackingField: 2
+  <Crouching>k__BackingField:
+    <Velocity>k__BackingField: 2.2
+    <VelocitySmoothing>k__BackingField: 5
+  <Walking>k__BackingField:
+    <Velocity>k__BackingField: 3
+    <VelocitySmoothing>k__BackingField: 5
+  <Sprinting>k__BackingField:
+    <Velocity>k__BackingField: 6.5
+    <VelocitySmoothing>k__BackingField: 3
+  <AccelerationCurve>k__BackingField:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.165492
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0.21636686
+      outSlope: 0.21636686
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.22880119
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  <CrouchRatio>k__BackingField: 0.65
+  <ProneTransitionDuration>k__BackingField: 1
+  <JumpHeight>k__BackingField: 4
+  <AirFriction>k__BackingField: 0.3
+  <AirVelocity>k__BackingField: 0.4
+  <MaxFallVelocity>k__BackingField: 25
+  <Gravity>k__BackingField: 9
+  <SlideCurve>k__BackingField:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  <SlideSpeed>k__BackingField: 9
+  <SlideDirectionSmoothing>k__BackingField: 25
