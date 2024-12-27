@@ -2,7 +2,7 @@ using System;
 
 namespace FPS.Common
 {
-    public sealed class PlayerService : IControllerService<PlayerController>, IDisposable
+    public sealed class PlayerService : IControllerService<PlayerController>, IInitializable, IDisposable
     {
         private PlayerController _controller;
 

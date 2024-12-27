@@ -2,12 +2,10 @@ using System.Collections.Generic;
 using FPS.Settings;
 using UnityEngine;
 
-namespace FPS.Core
+namespace FPS.Common.Core
 {
     public sealed class InputPropertiesService
     {
-        private readonly InputPropertiesSettings _settings;
-
         private (int, float, float)[] _floatsToInterpolate;
         private Dictionary<string, int> _inputPropertyMap;
         private List<object> _inputProperties;
@@ -18,9 +16,7 @@ namespace FPS.Core
 
         public InputPropertiesService(InputPropertiesSettings settings)
         {
-            _settings = settings;
-
-            Initialize();
+            Initialize(settings);
         }
 
         public int GetPropertyIndex(string propertyName)
@@ -107,7 +103,7 @@ namespace FPS.Core
         }
 #endif
 
-        private void Initialize()
+        private void Initialize(InputPropertiesSettings settings)
         {
 #if UNITY_EDITOR
             _propertyNames = new List<(string, object)>();
@@ -119,7 +115,7 @@ namespace FPS.Core
 
             int index = 0;
 
-            foreach (var property in _settings.BoolProperties)
+            foreach (var property in settings.BoolProperties)
             {
                 _inputProperties.Add(property.DefaultValue);
                 _inputPropertyMap.TryAdd(property.Name, index);
@@ -130,7 +126,7 @@ namespace FPS.Core
 #endif
             }
 
-            foreach (var property in _settings.IntProperties)
+            foreach (var property in settings.IntProperties)
             {
                 _inputProperties.Add(property.DefaultValue);
                 _inputPropertyMap.TryAdd(property.Name, index);
@@ -141,7 +137,7 @@ namespace FPS.Core
 #endif
             }
 
-            foreach (var property in _settings.FloatProperties)
+            foreach (var property in settings.FloatProperties)
             {
                 _inputProperties.Add(property.DefaultValue);
                 _inputPropertyMap.TryAdd(property.Name, index);
@@ -162,7 +158,7 @@ namespace FPS.Core
                 _floatsToInterpolate = floatsToInterpolate.ToArray();
             }
 
-            foreach (var property in _settings.VectorProperties)
+            foreach (var property in settings.VectorProperties)
             {
                 _inputProperties.Add(property.DefaultValue);
                 _inputPropertyMap.TryAdd(property.Name, index);

@@ -30,6 +30,11 @@ namespace FPS
             _sensitivity = 1f;
         }
 
+        public void UpdateLook(float deltaMouseX)
+        {
+            transform.rotation *= Quaternion.Euler(0f, deltaMouseX, 0f);
+        }
+
         private void UpdateView()
         {
             float scale = _userInput.GetValue<float>(_sensitivityMultiplierPropertyIndex);

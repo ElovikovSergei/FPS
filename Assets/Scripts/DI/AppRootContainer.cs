@@ -1,3 +1,4 @@
+using FPS.Common.Core;
 using MiniContainer;
 using StateMachine;
 using FPS.Common;
@@ -14,8 +15,15 @@ namespace FPS.DI
             builder.RegisterStateMachine<AppStateType>(DIContainer);
 
             builder.RegisterSingleton<AppStateService>();
-            builder.RegisterSingleton<PlayerService>();
             builder.RegisterSingleton<InputService>();
+
+            // player
+            builder.RegisterSingleton<PlayerService>();
+            builder.RegisterSingleton<IPlayerViewService, PlayerViewService>();
+
+            // core
+            builder.RegisterSingleton<InputPropertiesService>();
+            builder.RegisterSingleton<IRecoilPatternService, RecoilPatternService>();
 
             // app states
             builder.RegisterScoped<GameState>();
