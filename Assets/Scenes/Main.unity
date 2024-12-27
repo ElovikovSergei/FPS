@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 635688649}
   - component: {fileID: 635688650}
   - component: {fileID: 635688651}
+  - component: {fileID: 635688652}
   m_Layer: 0
   m_Name: '[DI]'
   m_TagString: Untagged
@@ -277,6 +278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rootContainers:
   - {fileID: 635688651}
+  - {fileID: 635688652}
 --- !u!114 &635688651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +295,22 @@ MonoBehaviour:
   - {fileID: 1960872995}
   - {fileID: 920172894}
   _autoResolveGameObjects: []
+--- !u!114 &635688652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635688648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c22a2826735174897d17b87115e43d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _autoRegisterGameObjects: []
+  _autoResolveGameObjects: []
+  _settings:
+  - {fileID: 11400000, guid: 16868cd03ee527045b4d06a0651803cb, type: 2}
 --- !u!1 &762225395
 GameObject:
   m_ObjectHideFlags: 0
