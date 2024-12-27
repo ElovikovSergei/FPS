@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 635688649}
   - component: {fileID: 635688650}
   - component: {fileID: 635688651}
+  - component: {fileID: 635688652}
   m_Layer: 0
   m_Name: '[DI]'
   m_TagString: Untagged
@@ -293,6 +294,21 @@ MonoBehaviour:
   - {fileID: 1960872995}
   - {fileID: 920172894}
   _autoResolveGameObjects: []
+--- !u!114 &635688652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635688648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e47de4067127f44994e6a8ef0b11f9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _autoRegisterGameObjects: []
+  _autoResolveGameObjects: []
+  _weapons: []
 --- !u!1 &762225395
 GameObject:
   m_ObjectHideFlags: 0
